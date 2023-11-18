@@ -19,7 +19,7 @@ It is a Java program, but you don't need to have Java installed because it is bu
 
 RUNNING THE GAME
 
-To run the game, download and unzip the file Imagination_x64.zip located in the following project folder:
+To run the game on a Windows OS, download and unzip the file Imagination_x64.zip located in the following project folder:
 
 imagination-sud/Imagination/src/executable/
 
