@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="rootAnchorPane" fx:id="rootAnchorPane" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.javafx.ImaginationController">
+   <children>
+      <AnchorPane id="splashScreenAnchorPane" fx:id="splashScreenAnchorPane" layoutX="-14.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TilePane alignment="BOTTOM_CENTER" layoutX="33.0" layoutY="81.0" prefHeight="100.0" prefWidth="682.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="81.0">
+               <children>
+                  <Text stroke="#4f353514" strokeDashOffset="5.0" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="5.0" text="Imagination" textAlignment="CENTER" wrappingWidth="577.9999995604157" x="100.0" y="200.0" TilePane.alignment="CENTER">
+                     <font>
+                        <Font name="Matura MT Script Capitals" size="96.0" />
+                     </font>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </Text>
+               </children>
+            </TilePane>
+            <TilePane id="titleScreenButtonTilePane" fx:id="titleScreenButtonTilePane" alignment="CENTER" focusTraversable="true" layoutX="171.0" layoutY="417.0" maxHeight="142.0" maxWidth="458.0" minHeight="117.0" minWidth="458.0" orientation="VERTICAL" prefHeight="142.0" prefWidth="458.0" AnchorPane.leftAnchor="171.0" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="417.0">
+               <children>
+                  <Button id="startGameButton" fx:id="startGameButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartGameButtonAction" prefHeight="43.0" prefWidth="182.0" text="Start Game">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <TilePane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </TilePane.margin>
+                  </Button>
+                  <Button id="helpButton" fx:id="helpButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleHelpButtonAction" prefHeight="43.0" prefWidth="182.0" text="Help" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button id="quitButton" fx:id="quitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleQuitButtonAction" prefHeight="43.0" prefWidth="182.0" text="Quit">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <TilePane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </TilePane.margin>
+                  </Button>
+                  <Button id="optionsButton" fx:id="optionsButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handleOptionsButtonAction" prefHeight="43.0" prefWidth="182.0" text="Options" visible="false">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <TilePane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </TilePane.margin>
+                  </Button>
+               </children>
+            </TilePane>
+            <TilePane alignment="CENTER" layoutX="274.0" layoutY="188.0" prefHeight="43.0" prefWidth="200.0" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="274.0" AnchorPane.topAnchor="188.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="It's your world." textAlignment="CENTER" wrappingWidth="187.13671875" x="199.0" y="200.0">
+                     <font>
+                        <Font name="Lucida Console" size="17.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Text>
+               </children>
+            </TilePane>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="startGameAnchorPane" fx:id="startGameAnchorPane" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TilePane alignment="TOP_CENTER" layoutX="155.0" layoutY="31.0" prefHeight="64.0" prefWidth="439.0" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="31.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start Game" textAlignment="CENTER" wrappingWidth="357.13671875" TilePane.alignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+            <TilePane alignment="CENTER" focusTraversable="true" hgap="20.0" layoutX="172.0" layoutY="418.0" orientation="VERTICAL" prefHeight="106.0" prefWidth="458.0" vgap="20.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="170.0">
+               <children>
+                  <Button id="newGameButton" fx:id="newGameButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleNewGameButtonAction" prefHeight="43.0" prefWidth="210.0" text="New Game" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button id="cancelButton" fx:id="cancelButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="43.0" prefWidth="210.0" text="Cancel" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button id="loadSavedGameButton" fx:id="loadSavedGameButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleLoadSavedGameButtonAction" prefHeight="43.0" prefWidth="210.0" text="Load Saved Game" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button id="deleteSelectedGameButton" fx:id="deleteSelectedGameButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleDeleteSelectedGameButtonAction" prefHeight="43.0" prefWidth="210.0" text="Delete Saved Game" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </TilePane>
+            <ListView id="savedGameListView" fx:id="savedGameListView" layoutX="125.0" layoutY="101.0" prefHeight="309.0" prefWidth="499.0" visible="false" AnchorPane.bottomAnchor="219.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="101.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="deleteGameAnchorPane" fx:id="deleteGameAnchorPane" layoutX="10.0" layoutY="10.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TilePane alignment="CENTER" layoutX="155.0" layoutY="152.0" prefHeight="143.0" prefWidth="439.0" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="152.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure you want to delete the game?" textAlignment="CENTER" wrappingWidth="334.13671875" TilePane.alignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+            <TilePane alignment="CENTER" focusTraversable="true" hgap="20.0" layoutX="171.0" layoutY="316.0" orientation="VERTICAL" prefHeight="73.0" prefWidth="458.0" vgap="20.0" AnchorPane.leftAnchor="171.0" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="316.0">
+               <children>
+                  <Button id="deleteGameButton" fx:id="deleteGameButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleDeleteGameButtonAction" prefHeight="43.0" prefWidth="210.0" text="Delete" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button id="cancelDeleteGameButton" fx:id="cancelDeleteGameButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleCancelDeleteGameButtonAction" prefHeight="43.0" prefWidth="210.0" text="Cancel" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </TilePane>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="newGameAnchorPane" fx:id="newGameAnchorPane" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TilePane alignment="TOP_CENTER" layoutX="155.0" layoutY="32.0" prefHeight="73.0" prefWidth="439.0" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="32.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Create New Game" textAlignment="CENTER" wrappingWidth="357.13671875" TilePane.alignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+            <Label layoutX="212.0" layoutY="140.0" prefHeight="17.0" prefWidth="324.0" text="Enter game name:" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="212.0" AnchorPane.topAnchor="140.0">
+               <font>
+                  <Font name="Tempus Sans ITC" size="20.0" />
+               </font>
+            </Label>
+            <TextField id="savedGameNameTextField" fx:id="savedGameNameTextField" layoutX="212.0" layoutY="188.0" prefHeight="39.0" prefWidth="324.0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="212.0" AnchorPane.topAnchor="188.0">
+               <font>
+                  <Font name="Tempus Sans ITC" size="20.0" />
+               </font>
+            </TextField>
+            <TilePane alignment="CENTER" focusTraversable="true" hgap="20.0" layoutX="179.0" layoutY="300.0" orientation="VERTICAL" prefHeight="65.0" prefWidth="443.0" vgap="20.0" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="178.0" AnchorPane.topAnchor="300.0">
+               <children>
+                  <Button id="createNewGameButton" fx:id="createNewGameButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleCreateNewGameButtonAction" prefHeight="43.0" prefWidth="200.0" text="Create New Game" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button id="createNewGameCancelButton" fx:id="createNewGameCancelButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleCreateNewGameCancelButtonAction" prefHeight="43.0" prefWidth="200.0" text="Cancel" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </TilePane>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="optionsAnchorPane" fx:id="optionsAnchorPane" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TilePane alignment="CENTER" layoutX="300.0" layoutY="374.0" orientation="VERTICAL" prefHeight="91.0" prefWidth="200.0" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="374.0">
+               <children>
+                  <Button id="optionsDoneButton" fx:id="optionsDoneButton" mnemonicParsing="false" onAction="#handleOptionsDoneButtonAction" prefHeight="43.0" prefWidth="182.0" text="Done">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </TilePane>
+            <TilePane alignment="TOP_CENTER" layoutX="188.0" layoutY="29.0" prefHeight="64.0" prefWidth="372.0" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="188.0" AnchorPane.topAnchor="29.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="5.0" text="Options" textAlignment="CENTER" wrappingWidth="223.13671875">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+            <TilePane alignment="CENTER" hgap="20.0" layoutX="106.0" layoutY="126.0" maxHeight="-Infinity" maxWidth="-Infinity" orientation="VERTICAL" prefHeight="201.0" prefWidth="588.0" vgap="20.0" AnchorPane.bottomAnchor="273.0" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="106.0" AnchorPane.topAnchor="126.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="5.0" text="Set Command Line and Combat Dialog Text Size" textAlignment="CENTER" wrappingWidth="548.13671875">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="24.0" />
+                     </font>
+                  </Text>
+                  <RadioButton id="smallTextRadioButton" fx:id="smallTextRadioButton" contentDisplay="CENTER" mnemonicParsing="false" text="Small Text">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="textSizeGroup" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="largeTextRadioButton" fx:id="largeTextRadioButton" contentDisplay="CENTER" mnemonicParsing="false" selected="true" text="Large Text" toggleGroup="$textSizeGroup">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </TilePane>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="inGameAnchorPane" fx:id="inGameAnchorPane" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <TextField id="commandLine" fx:id="commandLine" focusTraversable="false" layoutX="233.0" layoutY="531.0" minHeight="36.0" minWidth="334.0" prefHeight="36.0" prefWidth="334.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="233.0">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="12.0" />
+               </font>
+            </TextField>
+            <MeshView />
+            <Text layoutX="24.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Combat Dialog" wrappingWidth="158.13671875" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="22.6064453125">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Text>
+            <GridPane id="gridPaneWorld" fx:id="gridPaneWorld" layoutX="358.0" layoutY="124.0" minHeight="280.0" minWidth="248.0" prefHeight="280.0" prefWidth="248.0" AnchorPane.bottomAnchor="196.0" AnchorPane.leftAnchor="358.0" AnchorPane.rightAnchor="194.0" AnchorPane.topAnchor="124.0">
+              <columnConstraints>
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+              </rowConstraints>
+            </GridPane>
+            <AmbientLight color="CHARTREUSE" lightOn="true" />
+            <MeshView />
+            <Text layoutX="650.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ROOMS VISITED" wrappingWidth="115.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="125.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="650.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DISTANCE FROM STARTING ROOM" wrappingWidth="115.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="235.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="650.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AVAILABLE EXITS" wrappingWidth="115.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="180.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="16.0" />
+               </font>
+            </Text>
+            <Label id="roomsVisitedLabel" fx:id="roomsVisitedLabel" alignment="CENTER_RIGHT" layoutX="743.0" layoutY="130.0" prefHeight="31.0" prefWidth="47.0" textAlignment="RIGHT" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="130.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label id="distanceFromStartingRoomLabel" fx:id="distanceFromStartingRoomLabel" alignment="CENTER_RIGHT" layoutX="743.0" layoutY="255.0" prefHeight="31.0" prefWidth="47.0" textAlignment="RIGHT" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="255.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label id="availableExitsLabel" fx:id="availableExitsLabel" alignment="CENTER_RIGHT" layoutX="743.0" layoutY="182.0" prefHeight="31.0" prefWidth="47.0" textAlignment="RIGHT" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="182.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Text id="imaginationBarLabel" fx:id="imaginationBarLabel" layoutX="103.0" layoutY="476.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMAGINATION" textAlignment="CENTER" wrappingWidth="115.79999873042107" AnchorPane.bottomAnchor="120.8212890625" AnchorPane.leftAnchor="103.0" AnchorPane.rightAnchor="581.2000012695789">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text id="healthBarLabel" fx:id="healthBarLabel" layoutX="139.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HEALTH" textAlignment="CENTER" wrappingWidth="85.13671875" AnchorPane.bottomAnchor="85.8212890625" AnchorPane.leftAnchor="139.0" AnchorPane.rightAnchor="575.86328125">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Text>
+            <ProgressBar id="imaginationProgressBar" fx:id="imaginationProgressBar" layoutX="233.0" layoutY="458.0" prefHeight="26.0" prefWidth="334.0" progress="1.0" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="233.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ProgressBar>
+            <ProgressBar id="healthProgressBar" fx:id="healthProgressBar" layoutX="233.0" layoutY="494.0" prefHeight="26.0" prefWidth="334.0" progress="1.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="233.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ProgressBar>
+            <TextArea id="combatDialog" fx:id="combatDialog" editable="false" focusTraversable="false" layoutX="24.0" layoutY="47.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="382.0" prefWidth="302.0" AnchorPane.bottomAnchor="171.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="47.0">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="12.0" />
+               </font>
+            </TextArea>
+            <TilePane alignment="CENTER" layoutX="279.0" layoutY="462.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="16.0" prefWidth="223.0" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="279.0" AnchorPane.rightAnchor="298.0">
+               <children>
+                  <Text id="imaginationProgressBarText" fx:id="imaginationProgressBarText" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 20" textAlignment="CENTER" wrappingWidth="194.99999555945396">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+            <TilePane alignment="CENTER" layoutX="268.0" layoutY="499.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="16.0" prefWidth="252.0" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="280.0">
+               <children>
+                  <Text id="healthProgressBarText" fx:id="healthProgressBarText" strokeType="OUTSIDE" strokeWidth="0.0" text="20 / 20" textAlignment="CENTER" wrappingWidth="168.13671875" TilePane.alignment="CENTER">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+            <Text layoutX="650.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENEMY LEVEL" wrappingWidth="115.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="70.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="18.0" />
+               </font>
+            </Text>
+            <Label id="enemyLevelLabel" fx:id="enemyLevelLabel" alignment="CENTER_RIGHT" layoutX="743.0" layoutY="75.0" prefHeight="31.0" prefWidth="47.0" textAlignment="RIGHT" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="75.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <TilePane alignment="CENTER" layoutX="339.0" layoutY="23.0" prefHeight="78.0" prefWidth="302.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="159.0" AnchorPane.topAnchor="23.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FARTHEST DISTANCE REACHED" textAlignment="CENTER" wrappingWidth="292.1367230415344" TilePane.alignment="CENTER">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Label id="highScoreLabel" fx:id="highScoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="73.0" textAlignment="CENTER" TilePane.alignment="CENTER">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </TilePane>
+            <TilePane alignment="CENTER" hgap="15.0" layoutX="339.0" layoutY="406.0" prefHeight="47.0" prefWidth="187.0" AnchorPane.bottomAnchor="147.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="274.0">
+               <children>
+                  <ImageView id="mageArmorIconImageView" fx:id="mageArmorIconImageView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/mageArmorIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="secondWindIconImageView" fx:id="secondWindIconImageView" fitHeight="31.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/secondWindIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="imaginationBonusImageView" fx:id="imaginationBonusImageView" fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/brainIconPlusOne.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </TilePane>
+            <Text layoutX="650.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSIGHT RATING" wrappingWidth="115.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="435.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="650.0" layoutY="504.9345703125" strokeType="OUTSIDE" strokeWidth="0.0" text="DEFENSE RATING" wrappingWidth="115.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="490.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="18.0" />
+               </font>
+            </Text>
+            <Label id="insightRatingLabel" fx:id="insightRatingLabel" alignment="CENTER_RIGHT" layoutX="743.0" layoutY="385.0" prefHeight="31.0" prefWidth="47.0" textAlignment="RIGHT" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="385.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label id="defenseRatingLabel" fx:id="defenseRatingLabel" alignment="CENTER_RIGHT" layoutX="743.0" layoutY="492.0" prefHeight="31.0" prefWidth="47.0" textAlignment="RIGHT" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="492.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Text layoutX="650.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ATTACK RATING" wrappingWidth="115.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="380.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="18.0" />
+               </font>
+            </Text>
+            <Label id="attackRatingLabel" fx:id="attackRatingLabel" alignment="CENTER_RIGHT" layoutX="743.0" layoutY="438.0" prefHeight="31.0" prefWidth="47.0" textAlignment="RIGHT" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="438.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Text id="healthBarLabel" fx:id="healthBarLabel1" layoutX="139.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ACTION:" textAlignment="CENTER" wrappingWidth="85.13671875" AnchorPane.bottomAnchor="43.8212890625" AnchorPane.leftAnchor="139.0" AnchorPane.rightAnchor="575.86328125">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Text>
+          </children>
+      </AnchorPane>
+      <AnchorPane id="gameMenuAnchorPane" fx:id="gameMenuAnchorPane" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TilePane alignment="TOP_CENTER" layoutX="188.0" layoutY="32.0" prefHeight="73.0" prefWidth="372.0" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="188.0" AnchorPane.topAnchor="32.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="5.0" text="Game Menu" textAlignment="CENTER" wrappingWidth="223.13671875">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+            <TilePane alignment="CENTER" hgap="20.0" layoutX="290.0" layoutY="228.0" orientation="VERTICAL" prefHeight="179.0" prefWidth="220.0" vgap="20.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="228.0">
+               <children>
+                  <Button id="backToGameButton" fx:id="backToGameButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackToGameButtonAction" prefHeight="43.0" prefWidth="182.0" text="Back to Game" TilePane.alignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button id="quitToTitleButton" fx:id="quitToTitleButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleQuitToTitleButtonAction" prefHeight="43.0" prefWidth="182.0" text="Quit to Title">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button id="optionsButton2" fx:id="optionsButton2" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handleOptionsButton2Action" prefHeight="43.0" prefWidth="182.0" text="Options" visible="false">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </TilePane>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="mapAnchorPane" fx:id="mapAnchorPane" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <TilePane alignment="CENTER" layoutX="290.0" layoutY="26.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="210.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="26.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="5.0" text="Dungeon Map" textAlignment="CENTER" wrappingWidth="223.13671875">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+            <Button id="mapCloseButton" fx:id="mapCloseButton" layoutX="681.0" layoutY="-1.0" mnemonicParsing="false" onAction="#handleMapCloseButtonAction" prefHeight="39.0" prefWidth="34.0" text="X" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <GridPane id="mapGridPane" fx:id="mapGridPane" layoutX="150.0" layoutY="76.0" prefHeight="468.0" prefWidth="491.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="149.0" AnchorPane.topAnchor="76.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Text layoutX="650.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ROOMS VISITED" wrappingWidth="95.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="90.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label id="roomsVisitedLabel2" fx:id="roomsVisitedLabel2" alignment="CENTER_RIGHT" layoutX="742.0" layoutY="89.0" prefHeight="34.0" prefWidth="38.0" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="89.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text layoutX="653.0" layoutY="152.9345703125" strokeType="OUTSIDE" strokeWidth="0.0" text="AVAILABLE EXITS" wrappingWidth="95.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="140.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label id="availableExitsLabel2" fx:id="availableExitsLabel2" alignment="CENTER_RIGHT" layoutX="742.0" layoutY="139.0" prefHeight="34.0" prefWidth="38.0" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="139.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="651.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DISTANCE FROM STARTING ROOM" wrappingWidth="95.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="190.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label id="distanceFromStartingRoomLabel2" fx:id="distanceFromStartingRoomLabel2" alignment="CENTER_RIGHT" layoutX="742.0" layoutY="204.0" prefHeight="34.0" prefWidth="38.0" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="204.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="652.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FARTHEST DISTANCE REACHED" wrappingWidth="95.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="280.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label id="highScoreLabel2" fx:id="highScoreLabel2" alignment="CENTER_RIGHT" layoutX="742.0" layoutY="286.0" prefHeight="34.0" prefWidth="38.0" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="286.0">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="insightsAnchorPane" fx:id="insightsAnchorPane" layoutX="10.0" layoutY="10.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <TilePane alignment="CENTER" layoutX="290.0" layoutY="30.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="210.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="30.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="5.0" text="Insights Known" textAlignment="CENTER" wrappingWidth="223.13671875">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+            <Button id="insightsCloseButton" fx:id="insightsCloseButton" layoutX="681.0" layoutY="-1.0" mnemonicParsing="false" onAction="#handleInsightsCloseButtonAction" prefHeight="39.0" prefWidth="34.0" text="X" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <TilePane alignment="CENTER_LEFT" layoutX="89.0" layoutY="115.0" orientation="VERTICAL" prefHeight="168.0" prefWidth="612.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="5.0" text="(M)age Armor          Magical armor grants +4 DR (DC 14)" wrappingWidth="604.13671875">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="5.0" text="(S)econd Wind          Regenerate health for a short time (DC  10)" wrappingWidth="606.13671875">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="gameOverAnchorPane" fx:id="gameOverAnchorPane" layoutX="10.0" layoutY="10.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TilePane alignment="TOP_CENTER" layoutX="143.0" layoutY="164.0" prefHeight="179.0" prefWidth="514.0" AnchorPane.bottomAnchor="257.0" AnchorPane.leftAnchor="143.0" AnchorPane.rightAnchor="143.0" AnchorPane.topAnchor="164.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="5.0" text="Game Over" textAlignment="CENTER" wrappingWidth="474.13671875">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="96.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+            <TilePane alignment="CENTER" hgap="20.0" layoutX="203.0" layoutY="460.0" orientation="VERTICAL" prefHeight="91.0" prefWidth="397.0" vgap="20.0" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="460.0">
+               <children>
+                  <Button id="restartGameButton" fx:id="restartGameButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleRestartGameButtonAction" prefHeight="43.0" prefWidth="182.0" text="Restart Game" TilePane.alignment="CENTER">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <Button id="quitToTitleButton2" fx:id="quitToTitleButton2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleQuitToTitleButton2Action" prefHeight="43.0" prefWidth="182.0" text="Quit to Title">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </TilePane>
+            <TilePane alignment="CENTER" orientation="VERTICAL" prefHeight="40.0" prefWidth="210.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="helpAnchorPane" fx:id="helpAnchorPane" layoutX="443.0" layoutY="20.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="357.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TilePane alignment="CENTER" layoutX="290.0" layoutY="30.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="210.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="30.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="5.0" text="Game Help" textAlignment="CENTER" wrappingWidth="286.13671875">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TilePane>
+            <TilePane id="titleScreenButtonTilePane" fx:id="titleScreenButtonTilePane1" alignment="CENTER" focusTraversable="true" layoutX="307.0" layoutY="520.0" maxHeight="142.0" maxWidth="458.0" minHeight="55.0" minWidth="187.0" orientation="VERTICAL" prefHeight="55.0" prefWidth="187.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="307.0" AnchorPane.rightAnchor="306.0">
+               <children>
+                  <Button id="helpCloseButton" fx:id="helpCloseButton" mnemonicParsing="false" onAction="#handleHelpCloseButtonAction" prefHeight="31.0" prefWidth="168.0" text="Close Help">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </TilePane>
+            <TextArea editable="false" focusTraversable="false" layoutX="50.0" layoutY="99.0" prefHeight="186.0" prefWidth="701.0" text="GAME SUMMARY&#10;Imagination is a simple first person dungeon crawler game.  You, the “Hero”, combat ferocious enemies.  The goal of the game is simple:  get as far from the starting room as possible.  Beware!  The farther the Hero gets from the start, the more difficult the enemies become.&#10;&#10;MOVEMENT&#10;The Hero moves with the arrow keys, or with the W, A, S, or D keys when the command line is not in focus.  If the Hero is facing the direction moved, the Hero will move to the next square.  If the Hero is facing a direction other than the move direction, the Hero will turn to face that direction.  The Hero can strafe (move without changing the direction faced) if CNTL is held down while moving.  If the Hero moves to a room exit (opening in the wall), the Hero will move to the next room.&#10;&#10;ATTACKING&#10;If the Hero is next to an enemy, it may be attacked with either the attack command at the command line, or by using the space bar when the command line is not in focus.  Pressing enter consecutive times after an attack command is entered at the command line causes the Hero to repeatedly attack.  The Hero must face the enemy to attack it.  &#10;&#10;Attack command (case insensitive):  &quot;a&quot; or &quot;attack&quot; &#10;This command can be repeated by pressing enter consecutive times after the command is entered.  &#10;&#10;INSIGHTS&#10;The Hero can invoke &quot;insights&quot;.  These are similar to traditional spells.  The Hero knows the following two insights which are entered at the command line.  The the shortcut key in paranthesis may be entered instead of the entire name.  The commands are case insensitve.  They may be repeated by pressing the enter key consecutive times.&#10;&#10;(M)age Armor          Magical armor grants +4 Defense Rating for a short time (Difficulty Check 14)&#10;(S)econd Wind          Regenerate health for a short time (Difficulty Check  10)&#10;&#10;HERO STATISTICS&#10;Attack Rating (AR)          This is a bonus the Hero adds to attack&#10;Insight Rating (IR)            This is a bonus the Hero adds to invoke an insight&#10;Defense Rating (DR)         The Hero's defense rating is the number the enemy must meet or exceed to&#10;                                            succefully attack and damage the Hero.&#10;Imagination (0-20)         Imagination is gained with an insight is invoked or an enemy is killed.  When &#10;                                           Imagination reaches 5, 10, or 15, the Hero is granted a +1, +2 or +3 bonus to AR, IR&#10;                                           and DR, respectively.  Imagination is lost each time the Hero gets hit by an enemy.&#10;Health (0-20)                   Lose your health and you die (the game ends).&#10;&#10;COMBAT / COMBAT DIALOG&#10;When the Hero or the enemy attacks, success is determined by a die 20 roll (1-20), plus the attacker's AR.  If this number meets or exceeds the DR of the target, the attack is successful.&#10;&#10;When an insight is invoked, a die twenty is rolled (1-20), plus the IR of the Hero.  If the result meets or exceeds the Difficulty Check (DC) of the insight, the insight is invoked successfully.  Otherswise, the insight fails.&#10;&#10;The combat dialog will display the result of attacks and insights.  It will also notify when insights end.&#10;&#10;STATUS ICONS&#10;There are up to three icons that will be displayed  above the Hero's Imagination bar.  These represent active insights or the Hero's imagination bonus.&#10;" wrapText="true" AnchorPane.bottomAnchor="315.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="99.0">
+               <font>
+                  <Font name="Tempus Sans ITC" size="14.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="55.0" layoutY="70.0" prefHeight="26.0" prefWidth="187.0" text="How to Play" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="70.0">
+               <font>
+                  <Font name="Tempus Sans ITC" size="20.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <TextArea editable="false" focusTraversable="false" layoutX="50.0" layoutY="360.0" prefHeight="168.0" prefWidth="701.0" text="ESC&#9;&#9;                 Toggle game options menu.  Game is paused when options menu is displayed.&#10;&#10;F1 &#9;&#9;                 Toggle the dungeon map.  Game is paused when map is displayed.&#10;&#10;F2 &#9;&#9;                 Toggle the list of Insights known.  Game is paused when Insights is displayed.&#10;&#10;F3 &#9;&#9;                 Toggle this help.  Pause the game when help is displayed.&#10;&#10;F4 &#9;&#9;                 Resize the game between 800 x 600 and maximum display size.&#10;&#10;w, up arrow&#9;         If hero is not facing up, turn to face up.  If hero is facing up, move hero up 1 square.  The w&#10;                                 key is enabled when the command line is not in focus.&#10;&#10;d, right arrow           If hero is not facing right, turn to face right.  If hero is facing right, move hero right 1 square.&#10;                                 The d key is enabled when the command line is not in focus.&#10;&#9;&#10;s, down arrow&#9;         If hero is not facing down, turn to face down.  If hero is facing down, move hero down 1&#10;                                 square.  The s key is enabled when the command line is not in focus.&#10;&#10;a, left arrow&#9;         If hero is not facing left, turn to face left.  If hero is facing left, move hero left 1 square.  The&#10;                                 a key is enabled when the command line is not in focus.&#10;&#10;space bar&#9;                 Attack adjacent square hero faces.&#10;&#10;ALT&#9;&#9;                 Toggle focus for command line.  Command line cleared when defocused.&#10;&#10;CNTL&#9;&#9;         When pressed, cause hero to strafe move (move without changing direction faced). &#10;&#10;ENTER&#9;&#9;         Process command line input when command line is in focus.  If pressed consecutive times, &#10;                                 repeat the last command." AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="49.0">
+               <font>
+                  <Font name="Tempus Sans ITC" size="14.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="55.0" layoutY="300.0" prefHeight="29.0" prefWidth="286.0" text="In Game Keyboard Commands" AnchorPane.bottomAnchor="271.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="459.0">
+               <font>
+                  <Font name="Tempus Sans ITC" size="20.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <Label layoutX="55.0" layoutY="329.0" prefHeight="26.0" prefWidth="252.0" text="Key                       Description" AnchorPane.bottomAnchor="245.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="459.0">
+               <font>
+                  <Font name="Tempus Sans ITC" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

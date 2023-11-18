@@ -1,0 +1,83 @@
+
+#commandLine {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 5;
+    -fx-border-width: 5;
+}
+
+#combatDialog {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-control-inner-background: #000000;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 5;
+    -fx-border-width: 5;
+}  
+
+#compassPane {  
+    -fx-background-color: #ffffff;
+    -fx-border-color:black; 
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+#north, #south, #east, #west {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+#savedGameNameTextField {
+    -fx-background-color: #000000;
+    -fx-boder-style: solid;
+    -fx-border-color:white; 
+    -fx-border-width: 3;
+    -fx-text-fill: #ffffff;
+}
+
+#savedGameListView {
+    -fx-boder-style: solid;
+    -fx-border-color:black; 
+    -fx-border-width: 1;
+    -fx-text-fill: #ffffff;
+}
+
+#gamemenuAnchorPane {
+    -fx-background-color: rgba(0, 100, 100, 0);
+}
+
+#mapAnchorPane, #insightsAnchorPane {
+    -fx-boder-style: solid;
+    -fx-border-color:black; 
+    -fx-border-width: 1;
+}
+
+#imaginationProgressBar {
+    -fx-background-color: blue;
+}
+
+#healthProgressBar {
+    -fx-accent: red;
+}
+
+#gridPaneWorld {
+    -fx-boder-style: solid;
+    -fx-border-color:black; 
+    -fx-border-width: 1;
+    //-fx-grid-lines-visible: true;
+    -fx-alignment: center;
+    -fx-background-image: url("images/stone_floor.jpg");
+}
+
+#mapGridPane {
+    -fx-boder-style: solid;
+    -fx-border-color:black; 
+    -fx-border-width: 1;
+}
